@@ -1,0 +1,7 @@
+c:\users\frees\source\repos\Lab17\Lab17\bin\Debug\Lab17.exe.config
+c:\users\frees\source\repos\Lab17\Lab17\bin\Debug\Lab17.exe
+c:\users\frees\source\repos\Lab17\Lab17\bin\Debug\Lab17.pdb
+c:\users\frees\source\repos\Lab17\Lab17\obj\Debug\Lab17.csprojAssemblyReference.cache
+c:\users\frees\source\repos\Lab17\Lab17\obj\Debug\Lab17.csproj.CoreCompileInputs.cache
+c:\users\frees\source\repos\Lab17\Lab17\obj\Debug\Lab17.exe
+c:\users\frees\source\repos\Lab17\Lab17\obj\Debug\Lab17.pdb
