@@ -12,83 +12,80 @@ namespace Lab17.Test
     public class PrimeNumberTests
     {
         [Test]
-        public void Is_Number_Less_Than_Zero()
+        public void False_If_Number_Less_Than_Zero()
         {
             //Arrange
             var generator = new PrimeNumberValidator();
 
             //Act
-            try
-            {
-                var result = generator.IsPrime(-1);
-            }
-            catch (Exception ex)
-            {
-                //Assert
-                Assert.AreEqual("The number must be greater than 1", ex.Message);
-            }
+
+            var result = generator.IsPrime(-1);
+            Assert.IsFalse(result);
+         
         }
         [Test]
-        public void Is_Number_Equal_To_Zero()
+        public void False_If_Number_Equal_To_Zero()
         {
             // Arrange
             var generator = new PrimeNumberValidator();
 
             //Act
-            try
-            {
-                var result = generator.IsPrime(0);
-            }
-            catch (Exception ex)
-            {
-                //Assert
-                Assert.AreEqual("The number must be greater than 1", ex.Message);
-            }
+
+            //Act
+
+            var result = generator.IsPrime(0);
+            Assert.IsFalse(result);
+
         }
         [Test]
-        public void Is_Number_Equal_To_One()
+        public void False_If_Number_Equal_To_One()
         {
             // Arrange
             var generator = new PrimeNumberValidator();
 
+
             //Act
-            try
-            {
-                var result = generator.IsPrime(1);
-            }
-            catch (Exception ex)
-            {
-                //Assert
-                Assert.AreEqual("The number must be greater than 1", ex.Message);
-            }
+
+            var result = generator.IsPrime(1);
+            Assert.IsFalse(result);
+
         }
-        [Test]
-        public void Throw_Exception_If_Number_Is_Even()
+       [Test]
+        public void False_If__Number_Is_Even()
         {
             var generator = new PrimeNumberValidator();
 
-            try
-            {
-                var result = generator.IsEven(4);
-            }
-            catch (Exception ex)
-            {
-                Assert.AreEqual("That number is even", ex.Message);
-            }
+
+        //Act
+
+        var result = generator.IsPrime(2);
+        Assert.IsFalse(result);
+
         }
-        [Test]
-        public void Throw_Exception_If_Number_Is_Even_And_Greater_Than_Two()
+    [Test]
+        public void False_If__Number_Is_Even_And_Greater_Than_Two()
         {
             var generator = new PrimeNumberValidator();
 
-            try
-            {
-                var result = generator.IsEven(4);
-            }
-            catch(Exception ex)
-            {
-                Assert.AreEqual("That number is even", ex.Message);
-            }
+
+        //Act
+
+        var result = generator.IsPrime(-1);
+        Assert.IsFalse(result);
+
+        }
+        [Test]
+        public void False_If__Number_Has_Decimal_Point_If_Divisible_By_Number_Other_Than_Itself()
+        {
+            var generator = new PrimeNumberValidator();
+
+
+            //Act
+
+            var result = generator.IsPrime(-1);
+            Assert.IsFalse(result);
+
         }
     }
 }
+

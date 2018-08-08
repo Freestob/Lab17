@@ -8,27 +8,26 @@ namespace Lab17
 {
     public class PrimeNumberValidator
     {
-        public string IsPrime(int number)
+        public bool IsPrime(int number)
         {
 
-           if (number <= 0  || number == 1)
+            if (number <= 0 || number == 1)
             {
-                throw new Exception("The number must be greater than 1");
+                return false;
             }
-           else
+            if (number % 2 == 0 && number != 2)
             {
-                throw new NotImplementedException();
-            }
-        }
-        public string IsEven(int number)
-        {
-            if (number %2 ==0 && number !=2)
-            {
-                throw new Exception("That number is even");
+                return false;
             }
             else
             {
-                throw new NotImplementedException();
+                var ceiling = Math.Sqrt(number);
+                for (int i = 3; i <= ceiling; i += 2)
+                {
+                    if (number % i == 0)
+                        throw new Exception("That number is not prime");
+                }
+                return true;
             }
         }
     }
