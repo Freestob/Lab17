@@ -51,14 +51,14 @@ namespace Lab17.Test
 
         }
        [Test]
-        public void False_If__Number_Is_Even()
+        public void False_If_Number_Is_Even()
         {
             var generator = new PrimeNumberValidator();
 
 
         //Act
 
-        var result = generator.IsPrime(2);
+        var result = generator.IsPrime(4);
         Assert.IsFalse(result);
 
         }

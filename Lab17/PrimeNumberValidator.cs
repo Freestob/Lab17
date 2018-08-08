@@ -25,7 +25,7 @@ namespace Lab17
                 for (int i = 3; i <= ceiling; i += 2)
                 {
                     if (number % i == 0)
-                        throw new Exception("That number is not prime");
+                        return false;
                 }
                 return true;
             }
